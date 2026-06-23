@@ -4,6 +4,7 @@ import Loader from "./components/Loader.jsx"
 import MovieCard from "./components/MovieCard.jsx";
 import "use-debounce"
 import { useDebounce } from "use-debounce";
+import { updateSearchCount } from "./TrendingMovies.js" 
 
 const MOVIE_API_BASE_URL = "https://api.themoviedb.org/3";
 const MOVIE_API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -58,8 +59,18 @@ const App = () => {
   }
 
   useEffect(() => {
-    fetchMovies(debouncedSearch);
+    fetchMovies(debouncedSearch); 
   }, [debouncedSearch]);
+
+  useEffect(() => {
+      async function updateSearch() {
+        const {movie_id, title, poster_path } = movieList[0];  
+        await updateSearchCount(movie_id, title, poster_path);
+      }
+      if (movieList.length >= 1) {  
+        updateSearch();
+      }  
+  }, [movieList]);
 
   return (  
     <main>

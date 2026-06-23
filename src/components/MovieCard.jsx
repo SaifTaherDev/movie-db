@@ -6,12 +6,11 @@ const MovieCard = ({
   return (
     <div className="movie-card">
         <img
-/*           src={
+           src={
             poster_path
               ? `${IMAGE_SERVER_BASE_URL}${poster_path}`
               : "no-movie.png"
-          } */
-             src="no-movie.png"
+          }
           alt={title}
         />
         <div className="mt-4">

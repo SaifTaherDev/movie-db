@@ -21,7 +21,7 @@
   },
   "emulators": {
     "firestore": {
-      "port": 8080
+      "port": 4001
     },
     "hosting": {
       "port": 5000
