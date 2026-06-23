@@ -167,15 +167,20 @@ const App = () => {
             <ul>
               {trendingList.map((movie, index) => (
                 <li key={movie.$id}>
-                  <p>{index + 1}</p>
-                  <img
-                    src={
-                      movie.poster_path
-                        ? `${IMAGE_SERVER_BASE_URL}${movie.poster_path}`
-                        : "no-movie.png"
-                    }
-                    alt={movie.title}
-                  />
+                  <div className="trendingWrapper">
+                    <div className="poster">
+                      <p className="rank">{index + 1}</p>
+                      <img
+                        src={
+                          movie.poster_path
+                            ? `${IMAGE_SERVER_BASE_URL}${movie.poster_path}`
+                            : "no-movie.png"
+                        }
+                        alt={movie.title}
+                      />
+                    </div>
+                    <p className="title">{movie.title}</p>
+                  </div>
                 </li>
               ))}
             </ul>
