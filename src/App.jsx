@@ -181,26 +181,6 @@ const App = () => {
             </ul>
           </section>
         )}
-        {trendingList.length > 0 && (
-          <section className="trending">
-            <h2>Trending Movies</h2>
-            <ul>
-              {trendingList.map((movie, index) => {
-                <li key={movie.id}>
-                  <p>{index + 1}</p>
-                  <img
-                    src={
-                      movie.poster_path
-                        ? `${IMAGE_SERVER_BASE_URL}${movie.poster_path}`
-                        : "no-movie.png"
-                    }
-                    alt={movie.title}
-                  />
-                </li>;
-              })}
-            </ul>
-          </section>
-        )}
         <section className="all-movies">
           <h2>Movie List</h2>
           {isLoading ? (
