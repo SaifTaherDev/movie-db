@@ -163,7 +163,7 @@
   }
 
   .loader {
-    @apply w-12 h-12 rounded-full border-[5px] border-beige-100 border-b-light-200 box-border animate-spin;
+    @apply w-12 h-12 rounded-full border-[5px] border-beige-100 border-b-light-200 box-border animate-spin inline-block;
     }
 }
 
