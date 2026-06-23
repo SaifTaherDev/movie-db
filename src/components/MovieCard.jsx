@@ -1,4 +1,4 @@
-const IMAGE_SERVER_BASE_URL = "https://image.tmdb.org/t/p/w500/";
+export const IMAGE_SERVER_BASE_URL = "https://image.tmdb.org/t/p/w500/";
 
 const MovieCard = ({
   movie: { original_language, poster_path, release_date, title, vote_average },
